@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voici la liste des Albums </title>
+</head>
+{% include 'disks/recherche.html' %}
+<body>
+    {% for album in albums %}
+    <div class="article">
+        <h3>{{ album.title }}</h3>
+        <p><a href="{% url "tracks" album_id=album.id %}">Lire la tracklist</a>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
