@@ -8,3 +8,9 @@ class Recherche(forms.Form):
         title = cleaned_data.get("title")
         return cleaned_data
 
+class AlbumForm(forms.ModelForm):
+        class Meta:
+            model = Album
+            fields = "__all__"
+
+#On peut rajouter une fonction def clean(self) pour s'assurer que l'album crée n'existe pas déja.

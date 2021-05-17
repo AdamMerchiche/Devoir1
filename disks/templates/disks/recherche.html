@@ -1,6 +1,7 @@
-  <head>
-    <h2>Faites une recherche d'album !</h2>
-</head>
+<h1>Search Results</h1>
 <form action="{% url "accueil" %}" method="get">
-  <input>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit"/>
 </form>
+

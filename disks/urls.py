@@ -3,7 +3,8 @@ from disks import views
 
 urlpatterns = [
     path('accueil', views.lire_albums, name = "accueil"),
+    path('', views.lire_albums, name="home2"),
     path('track/<int:album_id>', views.afficher_tracks, name ="tracks"),
-    path('album/recherche/<str:requete>', views.afficher_recherche, name ="albums"),
+    path('album/recherche', views.afficher_recherche, name ="albums"),
 ]
 

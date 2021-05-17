@@ -17,9 +17,12 @@ class Track(models.Model):
     name = models.CharField(max_length = 250)
     milliseconds = models.IntegerField()
     bytes = models.IntegerField()
-    unitPrice = models.IntegerField() #pas sur que ce soit une integer ici, plutot un décimal
+    unitPrice = models.FloatField() #pas sur que ce soit une integer ici, plutot un décimal
     composer = models.CharField(max_length = 250)
     album = models.ForeignKey(Album, on_delete= "models.CASCADE")
     def __str__(self):
         return self.name
+
+class ResultatRecherche(models.Model):
+    model = Album
 
